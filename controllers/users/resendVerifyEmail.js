@@ -8,7 +8,7 @@ const resendVerifyEmail = async (req, res) => {
   const user = await User.findOne({ email });
 
   if (!user) {
-    throw HttpError(401, "Something went wrong, please contact support");
+    throw HttpError(404, "Something went wrong, please contact support");
   }
 
   if (user.verify) {

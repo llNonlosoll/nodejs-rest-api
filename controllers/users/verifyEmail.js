@@ -7,7 +7,7 @@ const verifyEmail = async (req, res) => {
   const user = await User.findOne({ verificationToken });
 
   if (!user) {
-    throw HttpError(401, "Something went wrong, please contact support");
+    throw HttpError(404, "Something went wrong, please contact support");
   }
 
   await User.findByIdAndUpdate(user._id, {
