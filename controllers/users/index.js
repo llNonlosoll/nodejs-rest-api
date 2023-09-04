@@ -4,6 +4,7 @@ const login = require("./login");
 const getCurrentUser = require("./getCurrentUser");
 const logout = require("./logout");
 const updateUserSubscription = require("./updateUserSubscription");
+const updateAvatar = require("./updateAvatar");
 
 module.exports = {
   register: ctrlWrapper(register),
@@ -11,4 +12,5 @@ module.exports = {
   getCurrentUser: ctrlWrapper(getCurrentUser),
   logout: ctrlWrapper(logout),
   updateUserSubscription: ctrlWrapper(updateUserSubscription),
+  updateAvatar: ctrlWrapper(updateAvatar),
 };
